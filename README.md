@@ -1,9 +1,26 @@
 
+
 # Time Tracker App
 
 This project is a full-stack time tracking application with a React + Vite + Tailwind frontend and an Express + Sequelize (SQLite) backend.
 
 ---
+
+## Architecture & Design Choices
+
+- **Monorepo structure:** The project is split into `backend` and `frontend` folders for clear separation of concerns and easy development.
+- **Backend:**
+  - Built with Node.js, Express, and Sequelize ORM.
+  - Uses SQLite for local development to avoid external DB dependencies; can be swapped for Postgres/MySQL in production.
+  - RESTful API design with clear separation of models, controllers, and routes.
+  - Error handling middleware for consistent API error responses.
+- **Frontend:**
+  - Built with React, Vite, and Tailwind CSS for fast development and modern UI.
+  - Uses functional components and hooks for state management.
+  - API base URL is configurable via environment variable for flexibility.
+  - Tailwind CSS enables rapid, utility-first styling and responsive design.
+- **.env.example files:** Provided in both frontend and backend for easy environment setup.
+- **.gitignore:** Root-level ignore for node_modules, build outputs, .env files, and SQLite DB.
 
 ## Backend (Node.js + Express + Sequelize + SQLite)
 
